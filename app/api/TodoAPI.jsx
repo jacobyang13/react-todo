@@ -29,7 +29,7 @@ module.exports = {
     // Filter by searchText
     filiteredTodos = filiteredTodos.filter((todo) => {
       var text = todo.text.toLowerCase();
-      return searchText.length === 0 || text.indexOf(searchText) > -1;
+      return searchText.length === 0 || text.indexOf(searchText.toLowerCase()) > -1;
     });
     // Sort todos with non-completed first
     filiteredTodos.sort((a,b) => {
